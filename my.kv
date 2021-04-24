@@ -1,0 +1,58 @@
+<ProductComponent>
+    product_a_label: product_a_label
+    product_b_label: product_b_label
+    quantity_a: quantity_a
+    quantity_b: quantity_b
+    price_a: price_a
+    price_b: price_b
+
+    BoxLayout:
+        canvas:
+            Color:
+                # #263238
+                rgb: 0x26 / 255.0, 0x32 / 255.0, 0x38 / 255.0
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        orientation: "vertical"
+        size: root.width, root.height
+
+        Label:
+            id: product_a_label
+            text: "Product A"
+        GridLayout:
+            id: product_a_grid
+            cols: 2
+            padding: 10
+            Label:
+                text: "Quantity:"
+            TextInput:
+                id: quantity_a
+                multiline: False
+                on_text: root.best_price()
+            Label:
+                text: "Price:"
+            TextInput:
+                id: price_a
+                multiline: False
+                on_text: root.best_price()
+
+        Label:
+            id: product_b_label
+            text: "Product B"
+        GridLayout:
+            id: product_b_grid
+            cols: 2
+            padding: 10
+            Label:
+                text: "Quantity:"
+            TextInput:
+                id: quantity_b
+                multiline: False
+                on_text: root.best_price()
+            Label:
+                text: "Price:"
+            TextInput:
+                id: price_b
+                multiline: False
+                on_text: root.best_price()
