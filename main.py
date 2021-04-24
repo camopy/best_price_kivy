@@ -30,9 +30,11 @@ class ProductComponent(Widget):
 
     def highlight_best_product(self, best_product):
         if best_product.name == "Product A":
-            self.product_a_label.text = "Product A is the best"
+            self.product_a_label.text = "Product A is cheaper"
+            self.product_b_label.text = "Product B"
         else:
-            self.product_b_label.text = "Product B is the best"
+            self.product_b_label.text = "Product B is cheaper"
+            self.product_a_label.text = "Product A"
 
     def valid_inputs(self):
         if (
