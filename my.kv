@@ -30,12 +30,14 @@
                 id: quantity_a
                 multiline: False
                 on_text: root.best_price()
+                input_filter: "int"
             Label:
                 text: "Price:"
             TextInput:
                 id: price_a
                 multiline: False
                 on_text: root.best_price()
+                input_filter: "int"
 
         Label:
             id: product_b_label
@@ -50,9 +52,11 @@
                 id: quantity_b
                 multiline: False
                 on_text: root.best_price()
+                input_filter: "int"
             Label:
                 text: "Price:"
             TextInput:
                 id: price_b
                 multiline: False
                 on_text: root.best_price()
+                input_filter: "int"
